@@ -1,0 +1,24 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # ----------------------------------------------------------------------
+    # RewriteBase
+    # ----------------------------------------------------------------------
+    # Bỏ ghi chú (xóa dấu #) và thay đổi dòng bên dưới nếu trang web của bạn
+    # nằm trong một thư mục con trên host.
+    # Ví dụ: nếu URL là http://www.example.com/shop/, hãy đặt là /shop/
+    # Nếu trang web của bạn nằm ở gốc (http://www.example.com/), bạn có thể
+    # đặt là / hoặc để nó được ghi chú.
+    #
+    # RewriteBase /thumuccon/
+    RewriteBase /
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>

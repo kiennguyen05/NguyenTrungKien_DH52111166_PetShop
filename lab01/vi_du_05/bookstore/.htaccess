@@ -1,0 +1,16 @@
+RewriteCond %{QUERY_STRING} ^mod=news&id=([0-9]+)$
+RewriteRule ^index\.php$ news/%1.html? [L,R=301]
+
+<RequireAll>
+    Require all granted
+    Require not ip 234.45
+</RequireAll>
+
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^https?://(www\.)?tenmiencuaban\.com [NC]
+RewriteRule \.(jpg|jpeg|png|gif)$ - [F]
+
+
+DirectoryIndex myindex.php
+
+Options -Indexes

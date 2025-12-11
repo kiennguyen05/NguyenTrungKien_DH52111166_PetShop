@@ -1,0 +1,41 @@
+Dựa vào ví dụ 1, xây dựng thêm chức năng hiển thị tin tức trong website.
+a. Xây dựng Class News. Kế thừa từ class Db.
+ Thuộc tính: PageSize: kích thước (số lượng tin) 1 trang tin
+tức.
+ Có các phương thức:
+ getAll($page): Trả về danh sách các tin theo trang
+$page.
+ getDetail($id): để trả về một tin có id là $id
+b. Đặt thêm chức năng Tin tức trong menu của site để hiển thị tóm tắt
+các tin tức của website.
+c. Viết code cho module/news: xem danh sách tin, xem chi tiết một tin
+tức.
+4.2 Dựa vào ví dụ 2, hãy cài đặt cấu trúc, chức năng cho admins để khi click
+vào chức năng nào trên menu, trang load các script tương ứng trong
+modue đã cài đặt.
+a. Quản lý sản phẩm:
+ Quản lý loại sách.
+ Quản lý nhà xuất bản
+ Quản lý sách
+b. Quản lý đơn hàng: danh sách đơn hàng mới đặt, đang xử lý, đã hoàn
+thành,…
+c. Quản lý người sử dụng
+d. Quản lý tin tức
+4.3 Dựa vào ví dụ 3 xây dựng thêm các chức năng cho giỏ hàng:
+a. Hiển thị chi tiết
+b. Thêm, sửa, xóa một item trong giỏ hàng
+5. Nâng cao
+1. Cài đặt tìm kiếm, phân trang cho chức năng tìm kiếm nâng cao:
+ Khi click vào menu tìm kiếm sẽ load form tìm kiếm nâng cao: tìm
+theo tên sách, loại, nhà xuất bản, giá,…
+ Hiển thị tìm kiếm có phân trang.
+2. Cài đặt chức năng thanh toán của giỏ hàng
+ Kiểm tra, nếu khách hàng chưa đăng nhập, hiện form đăng nhập.
+ Thanh toán: Hiện form thông tin nhận hàng cho khách hàng nhập.
+Khi bấm Thanh Toán, sẽ các thêm dữ liệu vào table order (từ formnhập liệu và thông tin đăng nhập) và order_detail (từ giỏ hàng và
+thông tin đơn hàng).
+3. Cài đặt chức năng quản trị sách (tìm kiếm, hiển thị, thêm, sửa, xóa) trong
+admins
+ Kiểm tra dữ liệu trước khi thêm.
+ Có chức năng lọc thông tin, tìm kiếm trước khi sửa.
+ Thông báo sau khi thực hiện xong một thao tác.
